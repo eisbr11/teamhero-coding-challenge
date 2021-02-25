@@ -1,22 +1,16 @@
 import React from 'react';
+import { ThemeProvider } from 'react-jss';
 
+import ContactsScreen from 'screens/Contacts.screen';
 import useStyles from 'styles/global.styles';
+import teamHeroTheme from 'themes/teamHero.theme';
 
 function App() {
   useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={teamHeroTheme}>
+      <ContactsScreen />
+    </ThemeProvider>
   );
 }
 

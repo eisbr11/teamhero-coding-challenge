@@ -2,7 +2,7 @@ name: Lint
 
 on: [push]
 jobs:
-  eslint:
+  eslint and jest:
     runs-on: ubuntu-latest
     steps:
       - name: Check out Git repository

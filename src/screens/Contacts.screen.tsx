@@ -1,7 +1,9 @@
+import Layout from 'components/Layout';
+
 const ContactsScreen = () => (
-  <div>
+  <Layout>
     Contacts Screen
-  </div>
+  </Layout>
 );
 
 export default ContactsScreen;

@@ -1,11 +1,11 @@
 import { ContactsApi } from 'types/contacts.type';
-import companyServer from '../server/contacts.api';
+import contactsServer from '../server/contacts.api';
 
 /**
- * fetch company data from server
+ * fetch contacts data from server
  */
-const getCompanies = ():Promise<ContactsApi> => companyServer.get(
-  '/companies',
+const getContacts = ():Promise<ContactsApi> => contactsServer.get(
+  '/contacts',
 );
 
-export default getCompanies;
+export default getContacts;

@@ -6,7 +6,7 @@ const useStyles = createUseStyles({
     flexWrap: 'wrap',
   },
   skill: {
-    color: (theme) => theme.colorSecondary,
+    color: (theme) => theme.colorGrayDark,
     backgroundColor: (theme) => theme.colorHighlight,
     padding: 4,
     borderRadius: 6,

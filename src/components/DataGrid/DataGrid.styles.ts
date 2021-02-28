@@ -10,6 +10,8 @@ const useStyles = createUseStyles({
   row: {
     display: 'flex',
     flexDirection: 'row',
+    borderBottom: (theme) => (`1px solid ${theme.colorGrayLight}`),
+    alignItems: 'center',
   },
   bodyCol: {
     flex: 1,

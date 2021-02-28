@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
     textTransform: 'uppercase',
   },
   body: {
-    color: (theme) => theme.colorPrimary,
+    color: (theme) => theme.colorGrayDark,
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
     overflow: 'hidden',

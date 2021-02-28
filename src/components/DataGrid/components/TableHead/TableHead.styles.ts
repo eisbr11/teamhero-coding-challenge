@@ -6,6 +6,8 @@ const useStyles = createUseStyles({
     flexDirection: 'row',
     padding: [8, 0],
     backgroundColor: (theme) => (theme.colorGrayLight),
+    position: 'sticky',
+    top: 0,
   },
   headCol: {
     flex: 1,

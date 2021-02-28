@@ -16,7 +16,7 @@ export interface GridConfig {
    * if true, the head column of the grid is hidden
    */
   hideHead: boolean;
-};
+}
 
 export interface ColConfig {
   /**

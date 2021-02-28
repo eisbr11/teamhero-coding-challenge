@@ -72,3 +72,10 @@ export declare type CompareFn = (
  * The cell value type.
  */
 export declare type CellContent = string | number | boolean | null | undefined | object;
+
+export type DataGridStateType = {
+
+  columns: ColConfig[];
+
+  rows: Row[],
+};

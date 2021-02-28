@@ -1,11 +1,8 @@
 import React from 'react';
-import { useTheme } from 'react-jss';
 
 import { ColConfig, GridConfig, Row } from 'types/datagrid.type';
-import calculateMinWidth from 'helper/tableWrapper.helper';
-import useStyles from './DataGrid.styles';
-import TableHead from './components/TableHead';
-import BodyRow from './components/BodyRow';
+import DataGridContextProvider from 'context/DataGridContextProvider.component';
+import Table from './components/Table';
 
 const DataGrid = ({
   rows,
@@ -15,24 +12,10 @@ const DataGrid = ({
   rows: Row[],
   columns: ColConfig[],
   gridConfig: GridConfig,
-}) => {
-  const theme = useTheme();
-  const classes = useStyles(theme);
-
-  const minWidth = calculateMinWidth(columns);
-
-  return (
-    <div style={{ minWidth }} className={classes.wrapper}>
-      {(!gridConfig.hideHead && (
-        <TableHead columns={columns} />
-      ))}
-      <div className={classes.bodyWrapper}>
-        {rows.map((row) => (
-          <BodyRow key={`row_${row.id}`} columns={columns} row={row} />
-        ))}
-      </div>
-    </div>
-  );
-};
+}) => (
+  <DataGridContextProvider columns={columns} rows={rows}>
+    <Table gridConfig={gridConfig} />
+  </DataGridContextProvider>
+);
 
 export default DataGrid;

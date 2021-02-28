@@ -20,7 +20,7 @@ const useStyles = createUseStyles({
     body: {
       color: 'black',
       background: '#333333',
-      fontSize: '1.25rem',
+      fontSize: '1rem',
       lineHeight: 1.44,
       fontWeight: 400,
     },

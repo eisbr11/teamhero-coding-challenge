@@ -46,7 +46,7 @@ export type ContactsStateType = {
 
 export type ContactsApi = ContactApi[];
 
-type Skill = {
+export type Skill = {
   /**
    * the internal id for the skill
    */

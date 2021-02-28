@@ -1,14 +1,16 @@
 import React from 'react';
 import { useTheme } from 'react-jss';
 
-import { ColConfig } from 'types/datagrid.type';
-import useStyles from './TableHead.styles';
+import { ColConfig, Row } from 'types/datagrid.type';
 import TableCell from '../TableCell';
+import useStyles from './BodyRow.styles';
 
-const TableHead = ({
+const BodyRow = ({
+  row,
   columns,
 }: {
-  columns: ColConfig[]
+  row: Row,
+  columns: ColConfig[],
 }) => {
   const theme = useTheme();
   const classes = useStyles(theme);
@@ -18,13 +20,12 @@ const TableHead = ({
       {columns.map((column) => (
         (!column.hide && (
           <TableCell
-            key={`header-col-${column.dataKey}`}
+            key={`cell${column.dataKey}_${row.id}`}
             align={column.align}
-            variant="head"
             grow={column.flexGrow}
             width={column.width}
           >
-            {column.label}
+            {column.valueGetter(row, column.dataKey)}
           </TableCell>
         ))
       ))}
@@ -32,4 +33,4 @@ const TableHead = ({
   );
 };
 
-export default TableHead;
+export default BodyRow;

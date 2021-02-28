@@ -36,7 +36,7 @@ export interface ColConfig {
   /**
    * the width of the cell
    */
-  width?: number;
+  width: number;
   /**
    * if true, the column can be sorted
    * @default false

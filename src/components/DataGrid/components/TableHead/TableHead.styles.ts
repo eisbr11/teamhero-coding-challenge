@@ -8,10 +8,7 @@ const useStyles = createUseStyles({
     backgroundColor: (theme) => (theme.colorGrayLight),
     position: 'sticky',
     top: 0,
-  },
-  headCol: {
-    flex: 1,
-    minWidth: 150,
+    margin: 2,
   },
 });
 

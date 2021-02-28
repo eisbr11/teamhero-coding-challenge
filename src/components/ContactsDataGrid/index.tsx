@@ -6,11 +6,15 @@ import createGridConfig from 'helper/GridConfig';
 import SkillTags from 'components/SkillTags';
 
 const columns: ColConfig[] = [
-  createColConfig({ dataKey: 'id', label: 'ID', hide: true }),
+  createColConfig({
+    dataKey: 'id',
+    label: 'ID',
+    hide: false,
+    width: 50,
+  }),
   createColConfig({ dataKey: 'firstName', label: 'First Name' }),
   createColConfig({ dataKey: 'lastName', label: 'Last Name' }),
   createColConfig({ dataKey: 'email', label: 'E-Mail', flexGrow: 1.0 }),
-  createColConfig({ dataKey: 'location', label: 'Location', align: 'center' }),
   createColConfig({
     dataKey: 'skills',
     label: 'Skills',
@@ -21,7 +25,9 @@ const columns: ColConfig[] = [
         <SkillTags skills={skills} />
       );
     },
+    flexGrow: 1,
   }),
+  createColConfig({ dataKey: 'location', label: 'Location' }),
 ];
 
 const contactsGridConfig: GridConfig = createGridConfig({

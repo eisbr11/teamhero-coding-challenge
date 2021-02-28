@@ -11,6 +11,8 @@ const TableCell = ({
   className,
   children,
   align,
+  grow = 0,
+  width = 100,
   ...props
 }: TableCellProps) => {
   const CustomTag = tag as keyof JSX.IntrinsicElements;
@@ -31,6 +33,11 @@ const TableCell = ({
           (align === 'left') && classes.leftAlign,
         )
       }
+      style={{
+        flexBasis: width,
+        flexGrow: grow ? 1 : 0,
+        flexShrink: 0,
+      }}
       {...props}
     >
       {children}

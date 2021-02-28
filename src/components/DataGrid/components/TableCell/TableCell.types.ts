@@ -26,8 +26,25 @@ export interface TableCellProps {
    * The content of the component
    */
   children?: React.ReactNode,
-
+  /**
+   * additional classnames
+   */
   className?: string;
 
+  /**
+   * how the content of the cell should align
+   */
   align?: Alignment;
+
+  /**
+   * if this is true, the cell can grow
+   * @default 0
+   */
+  grow?: number;
+
+  /**
+   * width of the cell
+   * @default 100
+   */
+  width?: number;
 }

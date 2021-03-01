@@ -80,6 +80,11 @@ export interface ColConfig {
 }
 
 /**
+ * the sort direction
+ */
+export declare type SortDirection = 'ASC' | 'DESC' | 'NONE';
+
+/**
  * Compare Function for sorting
  */
 export declare type CompareFn = (
@@ -98,6 +103,12 @@ export declare type ActiveFilter = {
   filterFn: FilterFn;
 };
 
+export declare type ActiveSort = {
+  dataKey: string;
+  direction: SortDirection;
+  sortFn: CompareFn;
+};
+
 export declare type FilterType = 'text' | 'tag';
 
 /**
@@ -112,4 +123,6 @@ export type DataGridStateType = {
   rows: Row[],
 
   activeFilters: ActiveFilter[];
+
+  activeSort: ActiveSort;
 };

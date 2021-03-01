@@ -14,13 +14,11 @@ const TableHead = ({
   const theme = useTheme();
   const classes = useStyles(theme);
 
-  const { sortRows } = useDataGridState();
+  const { setSort } = useDataGridState();
 
   const handleClick = (column: ColConfig) => {
     if (column.sortable) {
-      console.log(`sort column: ${column.dataKey} with ${column.sortFn}`);
-
-      sortRows(column.dataKey, column.sortFn);
+      setSort(column.dataKey, column.sortFn);
     } else {
       console.log('dont sort');
     }

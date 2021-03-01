@@ -5,9 +5,14 @@ import {
   ColConfig,
   CompareFn,
   DataGridStateType, FilterFn,
-  Row,
+  Row, SortDirection,
 } from 'types/datagrid.type';
-import { uniqueFilters } from 'helper/dataGrid.helper';
+import {
+  compareStrings,
+  sortRows,
+  uniqueFilters,
+  updateSortDirectionFromOldValue,
+} from 'helper/dataGrid.helper';
 import { DataGridContext } from './dataGrid.context';
 
 /**
@@ -32,13 +37,19 @@ const DataGridContextProvider = ({
     columns: [],
     rows: [],
     activeFilters: [],
+    activeSort: {
+      dataKey: '',
+      direction: 'NONE',
+      sortFn: compareStrings,
+    },
   };
 
   const [dataGridState, setDataGridState] = React.useState(defaultDataGridState);
 
   useEffect(() => {
-    setDataGridState((() => (
+    setDataGridState(((prevState) => (
       {
+        ...prevState,
         columns,
         rows,
         activeFilters: [],
@@ -46,31 +57,26 @@ const DataGridContextProvider = ({
     )));
   }, []);
 
-  const sortRows = (dataKey: string, compareFn: CompareFn) => {
-    setDataGridState(((prevState) => {
-      const sortedRows = prevState.rows.sort(compareFn);
-      return (
-        {
-          ...prevState,
-          rows: sortedRows,
-        }
-      );
-    }));
-  };
+  const setSort = (dataKey: string, sortFn: CompareFn) => {
+    setDataGridState((prevState) => {
+      let updatedDirection: SortDirection = 'ASC';
+      if (prevState.activeSort.dataKey !== dataKey) {
+        updatedDirection = 'ASC';
+      } else {
+        updatedDirection = updateSortDirectionFromOldValue(prevState.activeSort.direction);
+      }
+      const activeSort = {
+        dataKey,
+        direction: updatedDirection,
+        sortFn,
+      };
 
-  /*
- * example filter
-  const activeFilters = [
-    {
-      dataKey: 'lastName',
-      filterValue: 'X',
-      filterFn: (
-        cellValue: string,
-        filterValue: string,
-      ): boolean => cellValue.toLocaleLowerCase().includes(filterValue.toLocaleLowerCase()),
-    },
-  ];
- */
+      return {
+        ...prevState,
+        activeSort,
+      };
+    });
+  };
 
   const setFilter = (dataKey: string, filterValue: string, filterFn: FilterFn) => {
     setDataGridState(((prevState) => {
@@ -82,22 +88,25 @@ const DataGridContextProvider = ({
           filterFn,
         },
       ];
-      return (
-        {
-          ...prevState,
-          activeFilters: uniqueFilters(activeFilters, 'dataKey'),
-        }
-      );
+      return {
+        ...prevState,
+        activeFilters: uniqueFilters(activeFilters, 'dataKey'),
+      };
     }));
   };
+
+  const getActiveFilters = (): ActiveFilter[] => dataGridState.activeFilters;
 
   const getComputedRows = (): Row[] => {
     const rawRows = dataGridState.rows;
 
-    let computedRows: Row[] = rawRows;
+    //  sort raw rows
+    const sortedRows: Row[] = sortRows(rawRows.slice(), dataGridState.activeSort);
+    let computedRows: Row[] = sortedRows.slice();
 
+    // filtering by active filters
     dataGridState.activeFilters.forEach((activeFilter) => {
-      computedRows = computedRows.filter(
+      computedRows = sortedRows.filter(
         (row) => activeFilter.filterFn(
           row[activeFilter.dataKey] as string,
           activeFilter.filterValue,
@@ -112,9 +121,10 @@ const DataGridContextProvider = ({
     <DataGridContext.Provider value={{
       dataGridState,
       setDataGridState,
-      sortRows,
       getComputedRows,
       setFilter,
+      getActiveFilters,
+      setSort,
     }}
     >
       {children}

@@ -4,7 +4,7 @@ import DataGrid from 'components/DataGrid';
 import createColConfig from 'helper/ColConfig';
 import createGridConfig from 'helper/GridConfig';
 import SkillTags from 'components/SkillTags';
-import { filterByString } from '../../helper/dataGrid.helper';
+import { compareStrings, filterByString } from 'helper/dataGrid.helper';
 
 const columns: ColConfig[] = [
   createColConfig({
@@ -13,6 +13,7 @@ const columns: ColConfig[] = [
     hide: false,
     width: 50,
     sortable: true,
+    sortFn: compareStrings,
   }),
   createColConfig({ dataKey: 'firstName', label: 'First Name' }),
   createColConfig({

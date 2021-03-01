@@ -4,7 +4,7 @@ import {
   CompareFn, FilterFn, FilterType,
   Row,
 } from 'types/datagrid.type';
-import { filterByString } from 'helper/dataGrid.helper';
+import { compareStrings, filterByString } from 'helper/dataGrid.helper';
 
 const createColConfig = ({
   dataKey,
@@ -12,7 +12,7 @@ const createColConfig = ({
   valueGetter,
   sortable = true,
   flexGrow = 0,
-  sortFn = () => 0,
+  sortFn = compareStrings,
   filterable = false,
   filterFn = filterByString,
   filterType = 'text',

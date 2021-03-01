@@ -1,4 +1,10 @@
-import { ActiveFilter, CellContent, FilterFn } from 'types/datagrid.type';
+import {
+  ActiveFilter, ActiveSort,
+  CellContent,
+  CompareFn,
+  FilterFn, Row,
+  SortDirection,
+} from 'types/datagrid.type';
 
 /**
  * make Active Filters unique by key
@@ -34,4 +40,54 @@ const filterByString: FilterFn = (
     : true;
 };
 
-export { uniqueFilters, filterByString };
+const compareStrings: CompareFn = ((val1, val2) => {
+  if (val1 && val2) {
+    if (val1 < val2) {
+      return -1;
+    }
+    if (val1 > val2) {
+      return 1;
+    }
+  }
+  return 0;
+});
+
+const updateSortDirectionFromOldValue = ((oldDirection: SortDirection) => {
+  switch (oldDirection) {
+    case 'NONE':
+      return 'ASC';
+      break;
+    case 'ASC':
+      return 'DESC';
+      break;
+    case 'DESC':
+      return 'NONE';
+      break;
+    default:
+      return 'ASC';
+  }
+});
+
+const sortRows = (rows: Row[], activeSort: ActiveSort): Row[] => {
+  switch (activeSort.direction) {
+    case 'ASC':
+      return rows.sort((a: Row, b: Row) => activeSort.sortFn(
+        a[activeSort.dataKey], b[activeSort.dataKey],
+      ));
+    case 'DESC':
+      return rows.sort((a: Row, b: Row) => activeSort.sortFn(
+        a[activeSort.dataKey], b[activeSort.dataKey],
+      )).reverse();
+    default:
+      console.log('default');
+      return rows;
+  }
+};
+
+export {
+  uniqueFilters,
+  filterByString,
+  compareStrings,
+  updateSortDirectionFromOldValue,
+  sortRows,
+};

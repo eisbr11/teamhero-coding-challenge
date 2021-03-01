@@ -28,15 +28,13 @@ const FilterBar = ({
     <div className={classes.wrapper}>
       {columns.map((column) => (
         (column.filterable && (
-          renderFilterByType(column)
+          <div key={`${column.dataKey}-filter`}>
+            { renderFilterByType(column) }
+          </div>
         ))
       ))}
     </div>
   );
 };
-
-/**
- * <FilterText key={`filter-col-${column.dataKey}`} column={column} />
- */
 
 export default FilterBar;

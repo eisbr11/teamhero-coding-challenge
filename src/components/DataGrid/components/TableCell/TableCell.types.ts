@@ -47,4 +47,9 @@ export interface TableCellProps {
    * @default 100
    */
   width?: number;
+
+  /**
+   * click Event Handler
+   */
+  onClick?: () => void;
 }

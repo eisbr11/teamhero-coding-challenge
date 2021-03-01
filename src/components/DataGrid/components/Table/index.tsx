@@ -7,30 +7,27 @@ import calculateMinWidth from 'helper/tableWrapper.helper';
 import useStyles from './Table.styles';
 import TableHead from '../TableHead';
 import BodyRow from '../BodyRow';
+import FilterBar from '../FilterBar';
 
 const Table = ({
   gridConfig,
 }: {
   gridConfig: GridConfig,
 }) => {
-  const { dataGridState, setDataGridState } = useDataGridState();
-  const { columns, rows } = dataGridState;
+  const { dataGridState, getComputedRows } = useDataGridState();
+  const { columns } = dataGridState;
+
+  const rows = getComputedRows();
 
   const theme = useTheme();
   const classes = useStyles(theme);
-
   const minWidth = calculateMinWidth(columns);
-
-  const emptyTable = () => {
-    setDataGridState({
-      columns: [],
-      rows: [],
-    });
-  };
 
   return (
     <div style={{ minWidth }} className={classes.wrapper}>
-      <button type="submit" onClick={emptyTable}>Test Button</button>
+      {(gridConfig.showFilters && (
+        <FilterBar columns={columns} />
+      ))}
       {(!gridConfig.hideHead && (
         <TableHead columns={columns} />
       ))}

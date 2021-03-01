@@ -4,6 +4,7 @@ import DataGrid from 'components/DataGrid';
 import createColConfig from 'helper/ColConfig';
 import createGridConfig from 'helper/GridConfig';
 import SkillTags from 'components/SkillTags';
+import { filterByString } from '../../helper/dataGrid.helper';
 
 const columns: ColConfig[] = [
   createColConfig({
@@ -11,9 +12,15 @@ const columns: ColConfig[] = [
     label: 'ID',
     hide: false,
     width: 50,
+    sortable: true,
   }),
   createColConfig({ dataKey: 'firstName', label: 'First Name' }),
-  createColConfig({ dataKey: 'lastName', label: 'Last Name' }),
+  createColConfig({
+    dataKey: 'lastName',
+    label: 'Last Name',
+    filterable: true,
+    filterFn: filterByString,
+  }),
   createColConfig({ dataKey: 'email', label: 'E-Mail', flexGrow: 1.0 }),
   createColConfig({
     dataKey: 'skills',
@@ -26,12 +33,15 @@ const columns: ColConfig[] = [
       );
     },
     flexGrow: 1,
+    filterable: true,
+    filterType: 'tag',
   }),
   createColConfig({ dataKey: 'location', label: 'Location' }),
 ];
 
 const contactsGridConfig: GridConfig = createGridConfig({
   hideHead: false,
+  showFilters: true,
 });
 
 const ContactsDataGrid = ({
@@ -39,6 +49,10 @@ const ContactsDataGrid = ({
 }: {
   contacts: ContactsApi,
 }) => {
+  /*
+   * If I would need to adjust the data, to fit my row DataType,
+   * I would add a transform helper function or a middleware here
+   */
   const rows: Row[] = contacts;
 
   return (

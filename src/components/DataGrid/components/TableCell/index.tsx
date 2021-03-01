@@ -13,6 +13,7 @@ const TableCell = ({
   align,
   grow = 0,
   width = 100,
+  onClick = () => {},
   ...props
 }: TableCellProps) => {
   const CustomTag = tag as keyof JSX.IntrinsicElements;
@@ -38,6 +39,7 @@ const TableCell = ({
         flexGrow: grow ? 1 : 0,
         flexShrink: 0,
       }}
+      onClick={onClick}
       {...props}
     >
       {children}

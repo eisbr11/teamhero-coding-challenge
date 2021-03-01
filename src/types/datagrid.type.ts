@@ -16,6 +16,11 @@ export interface GridConfig {
    * if true, the head column of the grid is hidden
    */
   hideHead: boolean;
+  /**
+   * if true, shows the filter options above the table
+   * @default false
+   */
+  showFilters: boolean;
 }
 
 export interface ColConfig {
@@ -45,7 +50,21 @@ export interface ColConfig {
   /**
    * the compare function, for sorting the column
    */
-  sortFn?: CompareFn;
+  sortFn: CompareFn;
+  /**
+   * check if a column can be filtered
+   * @default false
+   */
+  filterable: boolean;
+  /**
+   * a filter function
+   */
+  filterFn: FilterFn;
+  /**
+   * this defines, how the filters should be entered
+   * @default 'string'
+   */
+  filterType: FilterType;
   /**
    * the flex grow value for the column
    */
@@ -68,6 +87,19 @@ export declare type CompareFn = (
   val2: CellContent,
 ) => number;
 
+export declare type FilterFn = (
+  cellValue: CellContent,
+  filterValue: string,
+) => boolean;
+
+export declare type ActiveFilter = {
+  dataKey: string;
+  filterValue: string;
+  filterFn: FilterFn;
+};
+
+export declare type FilterType = 'text' | 'tag';
+
 /**
  * The cell value type.
  */
@@ -78,4 +110,6 @@ export type DataGridStateType = {
   columns: ColConfig[];
 
   rows: Row[],
+
+  activeFilters: ActiveFilter[];
 };

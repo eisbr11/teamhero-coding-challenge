@@ -26,12 +26,12 @@ const TableCell = ({
     <CustomTag
       className={
         clsx(
-          className,
           classes.cellBase,
           classes[variant],
           (align === 'right') && classes.rightAlign,
           (align === 'center') && classes.centerAlign,
           (align === 'left') && classes.leftAlign,
+          className,
         )
       }
       style={{

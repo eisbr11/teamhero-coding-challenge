@@ -6,8 +6,9 @@ const useStyles = createUseStyles({
     width: '100%',
   },
   head: {
+    display: 'inline-flex',
     fontWeight: 700,
-    padding: 8,
+    padding: [8, 8],
     textTransform: 'uppercase',
   },
   body: {

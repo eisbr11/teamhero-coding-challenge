@@ -1,7 +1,7 @@
 import { createContext, useContext } from 'react';
 
 import {
-  ActiveFilter,
+  ActiveFilter, ActiveSort,
   CompareFn,
   DataGridStateType,
   FilterFn,
@@ -16,6 +16,7 @@ export type DataGridContextType = {
   setFilter: (dataKey: string, filterValue: string, filterFn: FilterFn) => void;
   getActiveFilters: () => ActiveFilter[];
   setSort: (dataKey: string, sortFn: CompareFn) => void;
+  getActiveSort: () => ActiveSort;
 };
 
 export const DataGridContext = createContext<DataGridContextType>({
@@ -35,7 +36,13 @@ export const DataGridContext = createContext<DataGridContextType>({
   // eslint-disable-next-line no-console
   setFilter: () => console.warn('No provider found'),
   getActiveFilters: () => [],
+  // eslint-disable-next-line no-console
   setSort: () => console.warn('No provider found'),
+  getActiveSort: () => ({
+    dataKey: '',
+    direction: 'NONE',
+    sortFn: compareStrings,
+  }),
 });
 
 export const useDataGridState = () => useContext(DataGridContext);

@@ -117,6 +117,8 @@ const DataGridContextProvider = ({
     return computedRows;
   };
 
+  const getActiveSort = () => dataGridState.activeSort;
+
   return (
     <DataGridContext.Provider value={{
       dataGridState,
@@ -125,6 +127,7 @@ const DataGridContextProvider = ({
       setFilter,
       getActiveFilters,
       setSort,
+      getActiveSort,
     }}
     >
       {children}

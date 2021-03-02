@@ -79,7 +79,6 @@ const sortRows = (rows: Row[], activeSort: ActiveSort): Row[] => {
         a[activeSort.dataKey], b[activeSort.dataKey],
       )).reverse();
     default:
-      console.log('default');
       return rows;
   }
 };

@@ -8,6 +8,18 @@ import { compareStrings, filterByString } from 'helper/dataGrid.helper';
 
 const columns: ColConfig[] = [
   createColConfig({
+    dataKey: 'avatar',
+    label: '',
+    width: 100,
+    sortable: false,
+    valueGetter: (row: Row, key: string) => {
+      const imageSrc = row[key] as string;
+      return (
+        <img alt="Avatar" src={imageSrc} />
+      );
+    },
+  }),
+  createColConfig({
     dataKey: 'id',
     label: 'ID',
     hide: false,

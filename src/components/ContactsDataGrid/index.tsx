@@ -4,30 +4,35 @@ import DataGrid from 'components/DataGrid';
 import createColConfig from 'helper/ColConfig';
 import createGridConfig from 'helper/GridConfig';
 import SkillTags from 'components/SkillTags';
-import { compareStrings, filterByString } from 'helper/dataGrid.helper';
+import { compareStrings, filterByString, filterByTags } from 'helper/dataGrid.helper';
+import AvatarImage from 'components/AvatarImage';
 
 const columns: ColConfig[] = [
   createColConfig({
     dataKey: 'avatar',
     label: '',
-    width: 100,
+    width: 70,
     sortable: false,
     valueGetter: (row: Row, key: string) => {
       const imageSrc = row[key] as string;
       return (
-        <img alt="Avatar" src={imageSrc} />
+        <AvatarImage alt="Avatar" src={imageSrc} />
       );
     },
   }),
   createColConfig({
     dataKey: 'id',
     label: 'ID',
-    hide: false,
+    hide: true,
     width: 50,
     sortable: true,
     sortFn: compareStrings,
   }),
-  createColConfig({ dataKey: 'firstName', label: 'First Name' }),
+  createColConfig({
+    dataKey: 'firstName',
+    label: 'First Name',
+    filterable: true,
+  }),
   createColConfig({
     dataKey: 'lastName',
     label: 'Last Name',
@@ -48,6 +53,13 @@ const columns: ColConfig[] = [
     flexGrow: 1,
     filterable: true,
     filterType: 'tag',
+    filterFn: filterByTags,
+    filterTags: [
+      'English',
+      'German',
+      'Selling',
+      'Serving',
+    ],
   }),
   createColConfig({ dataKey: 'location', label: 'Location' }),
 ];

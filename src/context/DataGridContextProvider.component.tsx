@@ -106,7 +106,7 @@ const DataGridContextProvider = ({
 
     // filtering by active filters
     dataGridState.activeFilters.forEach((activeFilter) => {
-      computedRows = sortedRows.filter(
+      computedRows = computedRows.filter(
         (row) => activeFilter.filterFn(
           row[activeFilter.dataKey] as string,
           activeFilter.filterValue,
@@ -119,6 +119,15 @@ const DataGridContextProvider = ({
 
   const getActiveSort = () => dataGridState.activeSort;
 
+  const removeFilter = (dataKey: string) => {
+    setDataGridState(((prevState) => ({
+      ...prevState,
+      activeFilters: prevState.activeFilters.filter(
+        (activeFilter) => (activeFilter.dataKey !== dataKey),
+      ),
+    })));
+  };
+
   return (
     <DataGridContext.Provider value={{
       dataGridState,
@@ -127,6 +136,7 @@ const DataGridContextProvider = ({
       setFilter,
       getActiveFilters,
       setSort,
+      removeFilter,
       getActiveSort,
     }}
     >

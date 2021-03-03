@@ -8,7 +8,9 @@ const useStyles = createUseStyles({
   h2: {
     fontSize: 20,
   },
-  title: {},
+  title: {
+    fontSize: 16,
+  },
   subtitle: {
     fontSize: 12,
   },

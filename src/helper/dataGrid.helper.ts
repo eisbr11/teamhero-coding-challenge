@@ -5,6 +5,7 @@ import {
   FilterFn, Row,
   SortDirection,
 } from 'types/datagrid.type';
+import { Skill } from '../types/contacts.type';
 
 /**
  * make Active Filters unique by key
@@ -38,6 +39,20 @@ const filterByString: FilterFn = (
   return typeof cellValue === 'string' ? (
     cellValue?.toLocaleLowerCase().includes(filterValue.toLocaleLowerCase()))
     : true;
+};
+
+const filterByTags: FilterFn = (
+  cellValue: CellContent,
+  filterValue: string,
+): boolean => {
+  if (filterValue.length === 0) {
+    return true;
+  }
+  const skills = cellValue as Skill[];
+
+  const flatSkills = skills.map((skill) => skill.type);
+
+  return flatSkills.includes(filterValue);
 };
 
 const compareStrings: CompareFn = ((val1, val2) => {
@@ -86,6 +101,7 @@ const sortRows = (rows: Row[], activeSort: ActiveSort): Row[] => {
 export {
   uniqueFilters,
   filterByString,
+  filterByTags,
   compareStrings,
   updateSortDirectionFromOldValue,
   sortRows,

@@ -66,6 +66,10 @@ export interface ColConfig {
    */
   filterType: FilterType;
   /**
+   * the available tags to filter by with tags filter method
+   */
+  filterTags: string[];
+  /**
    * the flex grow value for the column
    */
   flexGrow?: number;

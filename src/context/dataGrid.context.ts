@@ -14,6 +14,7 @@ export type DataGridContextType = {
   setDataGridState: (dataGridState: DataGridStateType) => void;
   getComputedRows: () => Row[];
   setFilter: (dataKey: string, filterValue: string, filterFn: FilterFn) => void;
+  removeFilter: (dataKey: string) => void;
   getActiveFilters: () => ActiveFilter[];
   setSort: (dataKey: string, sortFn: CompareFn) => void;
   getActiveSort: () => ActiveSort;
@@ -35,6 +36,8 @@ export const DataGridContext = createContext<DataGridContextType>({
   getComputedRows: () => [],
   // eslint-disable-next-line no-console
   setFilter: () => console.warn('No provider found'),
+  // eslint-disable-next-line no-console
+  removeFilter: () => console.warn('No provider found'),
   getActiveFilters: () => [],
   // eslint-disable-next-line no-console
   setSort: () => console.warn('No provider found'),

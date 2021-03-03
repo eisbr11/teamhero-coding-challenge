@@ -76,6 +76,9 @@ const compareStrings: CompareFn = ((val1, val2) => {
   return 0;
 });
 
+/**
+ * update the sort direction Key depending on the old key
+ */
 const updateSortDirectionFromOldValue = ((oldDirection: SortDirection): SortDirection => {
   switch (oldDirection) {
     case 'NONE':

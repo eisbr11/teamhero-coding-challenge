@@ -1,4 +1,4 @@
-import { ColConfig } from '../types/datagrid.type';
+import { ColConfig } from 'types/datagrid.type';
 
 const calculateMinWidth = (columns: ColConfig[]): number => {
   let minWidth = 0;

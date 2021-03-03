@@ -41,6 +41,12 @@ const filterByString: FilterFn = (
     : true;
 };
 
+/**
+ * filter function for filtering by tags
+ *
+ * @param cellValue
+ * @param filterValue
+ */
 const filterByTags: FilterFn = (
   cellValue: CellContent,
   filterValue: string,
@@ -55,6 +61,9 @@ const filterByTags: FilterFn = (
   return flatSkills.includes(filterValue);
 };
 
+/**
+ * compare Function for two strings
+ */
 const compareStrings: CompareFn = ((val1, val2) => {
   if (val1 && val2) {
     if (val1 < val2) {
@@ -67,7 +76,7 @@ const compareStrings: CompareFn = ((val1, val2) => {
   return 0;
 });
 
-const updateSortDirectionFromOldValue = ((oldDirection: SortDirection) => {
+const updateSortDirectionFromOldValue = ((oldDirection: SortDirection): SortDirection => {
   switch (oldDirection) {
     case 'NONE':
       return 'ASC';

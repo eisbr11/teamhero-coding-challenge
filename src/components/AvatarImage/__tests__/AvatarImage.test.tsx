@@ -6,7 +6,7 @@ import teamHeroTheme from 'themes/teamHero.theme';
 import AvatarImage from '../index';
 
 describe('dataGrid - Component', () => {
-  it('should render correctly if there is no content', () => {
+  it('should render correctly', () => {
     const avatarImageComponent = mount(
       <ThemeProvider theme={teamHeroTheme}>
         <AvatarImage src="exampleUrl" alt="ALT-TEXT" />

@@ -57,6 +57,7 @@ describe('dataGrid - Component', () => {
     createColConfig({
       dataKey: 'thirdKey',
       label: 'A Tags Label',
+      filterable: true,
       filterType: 'tag',
       filterFn: filterByTags,
       filterTags: [

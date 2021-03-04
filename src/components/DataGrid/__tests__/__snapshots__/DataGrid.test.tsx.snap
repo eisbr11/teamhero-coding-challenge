@@ -124,7 +124,7 @@ exports[`dataGrid - Component should render with rows and cols 1`] = `
             "tag2",
           ],
           "filterType": "tag",
-          "filterable": false,
+          "filterable": true,
           "flexGrow": 0,
           "hide": false,
           "label": "A Tags Label",
@@ -214,7 +214,7 @@ exports[`dataGrid - Component should render with rows and cols 1`] = `
               "tag2",
             ],
             "filterType": "tag",
-            "filterable": false,
+            "filterable": true,
             "flexGrow": 0,
             "hide": false,
             "label": "A Tags Label",
@@ -314,7 +314,7 @@ exports[`dataGrid - Component should render with rows and cols 1`] = `
                     "tag2",
                   ],
                   "filterType": "tag",
-                  "filterable": false,
+                  "filterable": true,
                   "flexGrow": 0,
                   "hide": false,
                   "label": "A Tags Label",
@@ -478,7 +478,7 @@ exports[`dataGrid - Component should render with rows and cols 1`] = `
                           "tag2",
                         ],
                         "filterType": "tag",
-                        "filterable": false,
+                        "filterable": true,
                         "flexGrow": 0,
                         "hide": false,
                         "label": "A Tags Label",
@@ -538,7 +538,7 @@ exports[`dataGrid - Component should render with rows and cols 1`] = `
                       "tag2",
                     ],
                     "filterType": "tag",
-                    "filterable": false,
+                    "filterable": true,
                     "flexGrow": 0,
                     "hide": false,
                     "label": "A Tags Label",
@@ -691,7 +691,7 @@ exports[`dataGrid - Component should render with rows and cols 1`] = `
                       "tag2",
                     ],
                     "filterType": "tag",
-                    "filterable": false,
+                    "filterable": true,
                     "flexGrow": 0,
                     "hide": false,
                     "label": "A Tags Label",
@@ -880,7 +880,7 @@ exports[`dataGrid - Component should render with settings no header but filters 
             "tag2",
           ],
           "filterType": "tag",
-          "filterable": false,
+          "filterable": true,
           "flexGrow": 0,
           "hide": false,
           "label": "A Tags Label",
@@ -970,7 +970,7 @@ exports[`dataGrid - Component should render with settings no header but filters 
               "tag2",
             ],
             "filterType": "tag",
-            "filterable": false,
+            "filterable": true,
             "flexGrow": 0,
             "hide": false,
             "label": "A Tags Label",
@@ -1070,7 +1070,7 @@ exports[`dataGrid - Component should render with settings no header but filters 
                     "tag2",
                   ],
                   "filterType": "tag",
-                  "filterable": false,
+                  "filterable": true,
                   "flexGrow": 0,
                   "hide": false,
                   "label": "A Tags Label",
@@ -1164,6 +1164,67 @@ exports[`dataGrid - Component should render with settings no header but filters 
                   </div>
                 </FilterText>
               </div>
+              <div
+                key="thirdKey-filter"
+              >
+                <FilterTag
+                  column={
+                    Object {
+                      "align": "left",
+                      "dataKey": "thirdKey",
+                      "filterFn": [Function],
+                      "filterTags": Array [
+                        "tag1",
+                        "tag2",
+                      ],
+                      "filterType": "tag",
+                      "filterable": true,
+                      "flexGrow": 0,
+                      "hide": false,
+                      "label": "A Tags Label",
+                      "sortFn": [Function],
+                      "sortable": false,
+                      "valueGetter": [Function],
+                      "width": 150,
+                    }
+                  }
+                >
+                  <div
+                    className="wrapper-0-2-48"
+                  >
+                    <div
+                      key="filter-col-thirdKey"
+                    >
+                      <Typography
+                        tag="h3"
+                        variant="title"
+                      >
+                        <h3
+                          className="title-0-2-40"
+                        >
+                          Filter by A Tags Label:
+                        </h3>
+                      </Typography>
+                      <a
+                        className="tag-0-2-49 tag-d0-0-2-52 inactiveTag-0-2-51"
+                        href="#"
+                        key="filter-thirdKey-tag1"
+                        onClick={[Function]}
+                      >
+                        tag1
+                      </a>
+                      <a
+                        className="tag-0-2-49 tag-d0-0-2-52 inactiveTag-0-2-51"
+                        href="#"
+                        key="filter-thirdKey-tag2"
+                        onClick={[Function]}
+                      >
+                        tag2
+                      </a>
+                    </div>
+                  </div>
+                </FilterTag>
+              </div>
             </div>
           </FilterBar>
           <div
@@ -1211,7 +1272,7 @@ exports[`dataGrid - Component should render with settings no header but filters 
                       "tag2",
                     ],
                     "filterType": "tag",
-                    "filterable": false,
+                    "filterable": true,
                     "flexGrow": 0,
                     "hide": false,
                     "label": "A Tags Label",
@@ -1238,7 +1299,7 @@ exports[`dataGrid - Component should render with settings no header but filters 
               }
             >
               <div
-                className="row-0-2-22 row-d2-0-2-48"
+                className="row-0-2-22 row-d2-0-2-55"
               >
                 <TableCell
                   align="left"
@@ -1247,7 +1308,7 @@ exports[`dataGrid - Component should render with settings no header but filters 
                   width={150}
                 >
                   <span
-                    className="cellBase-0-2-12 body-0-2-14 body-d9-0-2-49 leftAlign-0-2-15"
+                    className="cellBase-0-2-12 body-0-2-14 body-d9-0-2-56 leftAlign-0-2-15"
                     onClick={[Function]}
                     style={
                       Object {
@@ -1267,7 +1328,7 @@ exports[`dataGrid - Component should render with settings no header but filters 
                   width={200}
                 >
                   <span
-                    className="cellBase-0-2-12 body-0-2-14 body-d10-0-2-50 rightAlign-0-2-16"
+                    className="cellBase-0-2-12 body-0-2-14 body-d10-0-2-57 rightAlign-0-2-16"
                     onClick={[Function]}
                     style={
                       Object {
@@ -1287,7 +1348,7 @@ exports[`dataGrid - Component should render with settings no header but filters 
                   width={150}
                 >
                   <span
-                    className="cellBase-0-2-12 body-0-2-14 body-d11-0-2-51 leftAlign-0-2-15"
+                    className="cellBase-0-2-12 body-0-2-14 body-d11-0-2-58 leftAlign-0-2-15"
                     onClick={[Function]}
                     style={
                       Object {
@@ -1311,7 +1372,7 @@ exports[`dataGrid - Component should render with settings no header but filters 
                         className="skillWrapper-0-2-28"
                       >
                         <span
-                          className="skill-0-2-29 skill-d2-0-2-52"
+                          className="skill-0-2-29 skill-d2-0-2-59"
                           key="1234"
                         >
                           tag1
@@ -1364,7 +1425,7 @@ exports[`dataGrid - Component should render with settings no header but filters 
                       "tag2",
                     ],
                     "filterType": "tag",
-                    "filterable": false,
+                    "filterable": true,
                     "flexGrow": 0,
                     "hide": false,
                     "label": "A Tags Label",
@@ -1395,7 +1456,7 @@ exports[`dataGrid - Component should render with settings no header but filters 
               }
             >
               <div
-                className="row-0-2-22 row-d3-0-2-53"
+                className="row-0-2-22 row-d3-0-2-60"
               >
                 <TableCell
                   align="left"
@@ -1404,7 +1465,7 @@ exports[`dataGrid - Component should render with settings no header but filters 
                   width={150}
                 >
                   <span
-                    className="cellBase-0-2-12 body-0-2-14 body-d12-0-2-54 leftAlign-0-2-15"
+                    className="cellBase-0-2-12 body-0-2-14 body-d12-0-2-61 leftAlign-0-2-15"
                     onClick={[Function]}
                     style={
                       Object {
@@ -1424,7 +1485,7 @@ exports[`dataGrid - Component should render with settings no header but filters 
                   width={200}
                 >
                   <span
-                    className="cellBase-0-2-12 body-0-2-14 body-d13-0-2-55 rightAlign-0-2-16"
+                    className="cellBase-0-2-12 body-0-2-14 body-d13-0-2-62 rightAlign-0-2-16"
                     onClick={[Function]}
                     style={
                       Object {
@@ -1444,7 +1505,7 @@ exports[`dataGrid - Component should render with settings no header but filters 
                   width={150}
                 >
                   <span
-                    className="cellBase-0-2-12 body-0-2-14 body-d14-0-2-56 leftAlign-0-2-15"
+                    className="cellBase-0-2-12 body-0-2-14 body-d14-0-2-63 leftAlign-0-2-15"
                     onClick={[Function]}
                     style={
                       Object {
@@ -1472,13 +1533,13 @@ exports[`dataGrid - Component should render with settings no header but filters 
                         className="skillWrapper-0-2-28"
                       >
                         <span
-                          className="skill-0-2-29 skill-d3-0-2-57"
+                          className="skill-0-2-29 skill-d3-0-2-64"
                           key="1234"
                         >
                           tag1
                         </span>
                         <span
-                          className="skill-0-2-29 skill-d3-0-2-57"
+                          className="skill-0-2-29 skill-d3-0-2-64"
                           key="5678"
                         >
                           tag2

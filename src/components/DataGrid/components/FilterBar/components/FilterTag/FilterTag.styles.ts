@@ -8,6 +8,8 @@ const useStyles = createUseStyles({
     marginBottom: 8,
   },
   tag: {
+    display: 'inline-flex',
+    alignItems: 'center',
     border: (theme) => `2px solid ${theme.colorHighlight}`,
     marginRight: 4,
     padding: 4,
@@ -20,8 +22,11 @@ const useStyles = createUseStyles({
     fontWeight: 700,
     borderColor: (theme) => theme.colorPrimary,
   },
-  inactiveTag: {
-
+  removeIcon: {
+    display: 'inline',
+    height: 20,
+    width: 20,
+    marginLeft: 4,
   },
 });
 

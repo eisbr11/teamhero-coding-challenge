@@ -1206,7 +1206,7 @@ exports[`dataGrid - Component should render with settings no header but filters 
                         </h3>
                       </Typography>
                       <a
-                        className="tag-0-2-49 tag-d0-0-2-52 inactiveTag-0-2-51"
+                        className="tag-0-2-49 tag-d0-0-2-52"
                         href="#"
                         key="filter-thirdKey-tag1"
                         onClick={[Function]}
@@ -1214,7 +1214,7 @@ exports[`dataGrid - Component should render with settings no header but filters 
                         tag1
                       </a>
                       <a
-                        className="tag-0-2-49 tag-d0-0-2-52 inactiveTag-0-2-51"
+                        className="tag-0-2-49 tag-d0-0-2-52"
                         href="#"
                         key="filter-thirdKey-tag2"
                         onClick={[Function]}

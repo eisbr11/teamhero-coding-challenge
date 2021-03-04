@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import { useTheme } from 'react-jss';
 
+import { RemoveCircle } from 'components/CustomIcons';
 import { ColConfig } from 'types/datagrid.type';
 import Typography from 'components/Typography';
 import { useDataGridState } from 'context/dataGrid.context';
@@ -40,14 +41,14 @@ const FilterTag = ({
   ) => (
     <a className={clsx(classes.tag, classes.activeTag)} href="#" onClick={(event) => handleRemove(event)} key={`filter-${column.dataKey}-${filterTag}`}>
       {filterTag}
-      (x)
+      <RemoveCircle className={classes.removeIcon} />
     </a>
   );
 
   const inactiveTag = (
     filterTag: string,
   ) => (
-    <a className={clsx(classes.tag, classes.inactiveTag)} href="#" onClick={(event) => handleAdd(event, filterTag)} key={`filter-${column.dataKey}-${filterTag}`}>
+    <a className={classes.tag} href="#" onClick={(event) => handleAdd(event, filterTag)} key={`filter-${column.dataKey}-${filterTag}`}>
       {filterTag}
     </a>
   );

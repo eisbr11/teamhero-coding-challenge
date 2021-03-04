@@ -7,9 +7,9 @@ import { ColConfig, GridConfig, Row } from 'types/datagrid.type';
 import createColConfig from 'helper/ColConfig';
 import teamHeroTheme from 'themes/teamHero.theme';
 import { filterByTags } from 'helper/dataGrid.helper';
+import SkillTags from 'components/SkillTags';
+import { Skill } from 'types/contacts.type';
 import DataGrid from '../index';
-import { Skill } from '../../../types/contacts.type';
-import SkillTags from '../../SkillTags';
 
 describe('dataGrid - Component', () => {
   const exampleRows: Row[] = [

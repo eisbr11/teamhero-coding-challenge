@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dataGrid - Component should render correctly if there is no content 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "colorBlack": "#000000",
+      "colorGrayDark": "#666666",
+      "colorGrayLight": "#f1f4f9",
+      "colorHighlight": "#fef0d8",
+      "colorPrimary": "#d51641",
+      "colorSecondary": "#a3b415",
+      "colorWhite": "#FFFFFF",
+    }
+  }
+>
+  <AvatarImage
+    alt="ALT-TEXT"
+    src="exampleUrl"
+  >
+    <div
+      className="imageWrap-0-2-1 imageWrap-d0-0-2-3"
+    >
+      <img
+        alt="ALT-TEXT"
+        className="image-0-2-2"
+        src="exampleUrl"
+      />
+    </div>
+  </AvatarImage>
+</ThemeProvider>
+`;

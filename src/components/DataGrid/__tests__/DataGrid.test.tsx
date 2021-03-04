@@ -1,23 +1,42 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { ThemeProvider } from 'react-jss';
-import toJSON from 'enzyme-to-json';
 
 import createGridConfig from 'helper/GridConfig';
 import { ColConfig, GridConfig, Row } from 'types/datagrid.type';
 import createColConfig from 'helper/ColConfig';
 import teamHeroTheme from 'themes/teamHero.theme';
+import { filterByTags } from 'helper/dataGrid.helper';
 import DataGrid from '../index';
+import { Skill } from '../../../types/contacts.type';
+import SkillTags from '../../SkillTags';
 
 describe('dataGrid - Component', () => {
   const exampleRows: Row[] = [
     {
+      id: 1,
       someKey: 'abc',
       someOtherKey: 'value1',
+      thirdKey: [
+        {
+          type: 'tag1',
+          id: '1234',
+        },
+      ],
     },
     {
+      id: 2,
       someKey: 'def',
       someOtherKey: 'value2',
+      thirdKey: [
+        {
+          type: 'tag1',
+          id: '1234',
+        }, {
+          type: 'tag2',
+          id: '5678',
+        },
+      ],
     },
   ];
 
@@ -34,6 +53,22 @@ describe('dataGrid - Component', () => {
       align: 'right',
       sortable: true,
       filterable: true,
+    }),
+    createColConfig({
+      dataKey: 'thirdKey',
+      label: 'A Tags Label',
+      filterType: 'tag',
+      filterFn: filterByTags,
+      filterTags: [
+        'tag1', 'tag2',
+      ],
+      sortable: false,
+      valueGetter: (row: Row, key: string) => {
+        const skills = row[key] as Skill[];
+        return (
+          <SkillTags skills={skills} />
+        );
+      },
     }),
   ];
 

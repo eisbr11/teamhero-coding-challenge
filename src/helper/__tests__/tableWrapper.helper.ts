@@ -17,17 +17,24 @@ describe('tableWrapper - Helper Functions', () => {
 
       const columns2 = [
         createColConfig({
-          dataKey: 'avatar',
+          dataKey: 'key1',
           label: '',
           width: 70,
         }),
         createColConfig({
-          dataKey: 'avatar',
+          dataKey: 'key2',
           label: '',
-          width: 123,
+          width: 80,
+          hide: true,
         }),
         createColConfig({
-          dataKey: 'avatar',
+          dataKey: 'key3',
+          label: '',
+          width: 123,
+          hide: false,
+        }),
+        createColConfig({
+          dataKey: 'key4',
           label: '',
           width: 27,
         }),

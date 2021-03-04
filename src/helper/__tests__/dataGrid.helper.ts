@@ -102,6 +102,14 @@ describe('dataGrid - Helper Functions', () => {
       expect(
         compareStrings('xyz', 'xyz'),
       ).toBe(0);
+
+      expect(
+        compareStrings(null, null),
+      ).toBe(0);
+
+      expect(
+        compareStrings('abc', null),
+      ).toBe(0);
     });
   });
 

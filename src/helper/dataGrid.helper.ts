@@ -83,13 +83,10 @@ const updateSortDirectionFromOldValue = ((oldDirection: SortDirection): SortDire
   switch (oldDirection) {
     case 'NONE':
       return 'ASC';
-      break;
     case 'ASC':
       return 'DESC';
-      break;
     case 'DESC':
       return 'NONE';
-      break;
     default:
       return 'ASC';
   }

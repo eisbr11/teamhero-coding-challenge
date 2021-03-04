@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sort Indicator should render correctly with None sort 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "colorBlack": "#000000",
+      "colorGrayDark": "#666666",
+      "colorGrayLight": "#f1f4f9",
+      "colorHighlight": "#fef0d8",
+      "colorPrimary": "#d51641",
+      "colorSecondary": "#a3b415",
+      "colorWhite": "#FFFFFF",
+    }
+  }
+>
+  <SortIndicator
+    activeSort={
+      Object {
+        "dataKey": "someOtherKey",
+        "direction": "NONE",
+        "sortFn": [Function],
+      }
+    }
+    column={
+      Object {
+        "align": "left",
+        "dataKey": "someOtherKey",
+        "filterFn": [Function],
+        "filterTags": Array [],
+        "filterType": "text",
+        "filterable": false,
+        "flexGrow": 0,
+        "hide": false,
+        "label": "LABEL",
+        "sortFn": [Function],
+        "sortable": true,
+        "valueGetter": [Function],
+        "width": 150,
+      }
+    }
+  >
+    <span
+      className="indicator-0-2-1"
+    />
+  </SortIndicator>
+</ThemeProvider>
+`;
+
+exports[`Sort Indicator should render correctly with no active sort associated 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "colorBlack": "#000000",
+      "colorGrayDark": "#666666",
+      "colorGrayLight": "#f1f4f9",
+      "colorHighlight": "#fef0d8",
+      "colorPrimary": "#d51641",
+      "colorSecondary": "#a3b415",
+      "colorWhite": "#FFFFFF",
+    }
+  }
+>
+  <SortIndicator
+    activeSort={
+      Object {
+        "dataKey": "different",
+        "direction": "ASC",
+        "sortFn": [Function],
+      }
+    }
+    column={
+      Object {
+        "align": "left",
+        "dataKey": "someOtherKey",
+        "filterFn": [Function],
+        "filterTags": Array [],
+        "filterType": "text",
+        "filterable": false,
+        "flexGrow": 0,
+        "hide": false,
+        "label": "LABEL",
+        "sortFn": [Function],
+        "sortable": true,
+        "valueGetter": [Function],
+        "width": 150,
+      }
+    }
+  />
+</ThemeProvider>
+`;
+
+exports[`Sort Indicator should render correctly with sort Ascending 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "colorBlack": "#000000",
+      "colorGrayDark": "#666666",
+      "colorGrayLight": "#f1f4f9",
+      "colorHighlight": "#fef0d8",
+      "colorPrimary": "#d51641",
+      "colorSecondary": "#a3b415",
+      "colorWhite": "#FFFFFF",
+    }
+  }
+>
+  <SortIndicator
+    activeSort={
+      Object {
+        "dataKey": "someOtherKey",
+        "direction": "ASC",
+        "sortFn": [Function],
+      }
+    }
+    column={
+      Object {
+        "align": "left",
+        "dataKey": "someOtherKey",
+        "filterFn": [Function],
+        "filterTags": Array [],
+        "filterType": "text",
+        "filterable": false,
+        "flexGrow": 0,
+        "hide": false,
+        "label": "LABEL",
+        "sortFn": [Function],
+        "sortable": true,
+        "valueGetter": [Function],
+        "width": 150,
+      }
+    }
+  >
+    <span
+      className="indicator-0-2-1"
+    >
+      <CaretDown
+        className=""
+      >
+        <svg
+          aria-hidden="true"
+          className=""
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+          />
+        </svg>
+      </CaretDown>
+    </span>
+  </SortIndicator>
+</ThemeProvider>
+`;
+
+exports[`Sort Indicator should render correctly with sort Ascending 2`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "colorBlack": "#000000",
+      "colorGrayDark": "#666666",
+      "colorGrayLight": "#f1f4f9",
+      "colorHighlight": "#fef0d8",
+      "colorPrimary": "#d51641",
+      "colorSecondary": "#a3b415",
+      "colorWhite": "#FFFFFF",
+    }
+  }
+>
+  <SortIndicator
+    activeSort={
+      Object {
+        "dataKey": "someOtherKey",
+        "direction": "DESC",
+        "sortFn": [Function],
+      }
+    }
+    column={
+      Object {
+        "align": "left",
+        "dataKey": "someOtherKey",
+        "filterFn": [Function],
+        "filterTags": Array [],
+        "filterType": "text",
+        "filterable": false,
+        "flexGrow": 0,
+        "hide": false,
+        "label": "LABEL",
+        "sortFn": [Function],
+        "sortable": true,
+        "valueGetter": [Function],
+        "width": 150,
+      }
+    }
+  >
+    <span
+      className="indicator-0-2-1"
+    >
+      <CaretUp
+        className=""
+      >
+        <svg
+          aria-hidden="true"
+          className=""
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+          />
+        </svg>
+      </CaretUp>
+    </span>
+  </SortIndicator>
+</ThemeProvider>
+`;

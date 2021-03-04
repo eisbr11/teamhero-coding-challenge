@@ -59,7 +59,7 @@ const DataGridContextProvider = ({
 
   const setSort = (dataKey: string, sortFn: CompareFn) => {
     setDataGridState((prevState) => {
-      let updatedDirection: SortDirection = 'ASC';
+      let updatedDirection: SortDirection;
       if (prevState.activeSort.dataKey !== dataKey) {
         updatedDirection = 'ASC';
       } else {

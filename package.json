@@ -29,6 +29,9 @@
     "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix",
     "mock-server": "json-server --watch data/mock/contacts.json"
   },
+  "jest": {
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -50,6 +53,7 @@
   "devDependencies": {
     "@types/enzyme": "^3.10.8",
     "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "enzyme-to-json": "^3.6.1",

@@ -5,7 +5,7 @@ import {
   filterByTags,
   uniqueFilters,
   compareStrings, updateSortDirectionFromOldValue,
-} from './dataGrid.helper';
+} from '../dataGrid.helper';
 
 describe('dataGrid - Helper Functions', () => {
   describe('uniqueFilters Function', () => {

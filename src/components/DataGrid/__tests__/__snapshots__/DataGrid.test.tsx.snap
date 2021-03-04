@@ -1,0 +1,974 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dataGrid - Component should render correctly if there is no content 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "colorBlack": "#000000",
+      "colorGrayDark": "#666666",
+      "colorGrayLight": "#f1f4f9",
+      "colorHighlight": "#fef0d8",
+      "colorPrimary": "#d51641",
+      "colorSecondary": "#a3b415",
+      "colorWhite": "#FFFFFF",
+    }
+  }
+>
+  <DataGrid
+    columns={Array []}
+    gridConfig={
+      Object {
+        "hideHead": false,
+        "showFilters": true,
+      }
+    }
+    rows={Array []}
+  >
+    <DataGridContextProvider
+      columns={Array []}
+      rows={Array []}
+    >
+      <Table
+        gridConfig={
+          Object {
+            "hideHead": false,
+            "showFilters": true,
+          }
+        }
+      >
+        <div
+          className="wrapper-0-2-1"
+          style={
+            Object {
+              "minWidth": 0,
+            }
+          }
+        >
+          <FilterBar
+            columns={Array []}
+          >
+            <div
+              className="wrapper-0-2-3"
+            />
+          </FilterBar>
+          <TableHead
+            columns={Array []}
+          >
+            <div
+              className="row-0-2-4 row-d0-0-2-8"
+            />
+          </TableHead>
+          <div
+            className="bodyWrapper-0-2-2"
+          />
+        </div>
+      </Table>
+    </DataGridContextProvider>
+  </DataGrid>
+</ThemeProvider>
+`;
+
+exports[`dataGrid - Component should render with rows and cols 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "colorBlack": "#000000",
+      "colorGrayDark": "#666666",
+      "colorGrayLight": "#f1f4f9",
+      "colorHighlight": "#fef0d8",
+      "colorPrimary": "#d51641",
+      "colorSecondary": "#a3b415",
+      "colorWhite": "#FFFFFF",
+    }
+  }
+>
+  <DataGrid
+    columns={
+      Array [
+        Object {
+          "align": "left",
+          "dataKey": "someKey",
+          "filterFn": [Function],
+          "filterTags": Array [],
+          "filterType": "text",
+          "filterable": false,
+          "flexGrow": 0,
+          "hide": false,
+          "label": "A LABEL",
+          "sortFn": [Function],
+          "sortable": true,
+          "valueGetter": [Function],
+          "width": 150,
+        },
+        Object {
+          "align": "right",
+          "dataKey": "someOtherKey",
+          "filterFn": [Function],
+          "filterTags": Array [],
+          "filterType": "text",
+          "filterable": true,
+          "flexGrow": 1,
+          "hide": false,
+          "label": "A DIFFERENT LABEL",
+          "sortFn": [Function],
+          "sortable": true,
+          "valueGetter": [Function],
+          "width": 200,
+        },
+      ]
+    }
+    gridConfig={
+      Object {
+        "hideHead": false,
+        "showFilters": false,
+      }
+    }
+    rows={
+      Array [
+        Object {
+          "someKey": "abc",
+          "someOtherKey": "value1",
+        },
+        Object {
+          "someKey": "def",
+          "someOtherKey": "value2",
+        },
+      ]
+    }
+  >
+    <DataGridContextProvider
+      columns={
+        Array [
+          Object {
+            "align": "left",
+            "dataKey": "someKey",
+            "filterFn": [Function],
+            "filterTags": Array [],
+            "filterType": "text",
+            "filterable": false,
+            "flexGrow": 0,
+            "hide": false,
+            "label": "A LABEL",
+            "sortFn": [Function],
+            "sortable": true,
+            "valueGetter": [Function],
+            "width": 150,
+          },
+          Object {
+            "align": "right",
+            "dataKey": "someOtherKey",
+            "filterFn": [Function],
+            "filterTags": Array [],
+            "filterType": "text",
+            "filterable": true,
+            "flexGrow": 1,
+            "hide": false,
+            "label": "A DIFFERENT LABEL",
+            "sortFn": [Function],
+            "sortable": true,
+            "valueGetter": [Function],
+            "width": 200,
+          },
+        ]
+      }
+      rows={
+        Array [
+          Object {
+            "someKey": "abc",
+            "someOtherKey": "value1",
+          },
+          Object {
+            "someKey": "def",
+            "someOtherKey": "value2",
+          },
+        ]
+      }
+    >
+      <Table
+        gridConfig={
+          Object {
+            "hideHead": false,
+            "showFilters": false,
+          }
+        }
+      >
+        <div
+          className="wrapper-0-2-1"
+          style={
+            Object {
+              "minWidth": 350,
+            }
+          }
+        >
+          <TableHead
+            columns={
+              Array [
+                Object {
+                  "align": "left",
+                  "dataKey": "someKey",
+                  "filterFn": [Function],
+                  "filterTags": Array [],
+                  "filterType": "text",
+                  "filterable": false,
+                  "flexGrow": 0,
+                  "hide": false,
+                  "label": "A LABEL",
+                  "sortFn": [Function],
+                  "sortable": true,
+                  "valueGetter": [Function],
+                  "width": 150,
+                },
+                Object {
+                  "align": "right",
+                  "dataKey": "someOtherKey",
+                  "filterFn": [Function],
+                  "filterTags": Array [],
+                  "filterType": "text",
+                  "filterable": true,
+                  "flexGrow": 1,
+                  "hide": false,
+                  "label": "A DIFFERENT LABEL",
+                  "sortFn": [Function],
+                  "sortable": true,
+                  "valueGetter": [Function],
+                  "width": 200,
+                },
+              ]
+            }
+          >
+            <div
+              className="row-0-2-4 row-d2-0-2-10"
+            >
+              <TableCell
+                align="left"
+                className="headCell-0-2-6 sortable-0-2-5 sortable-d3-0-2-11"
+                grow={0}
+                key="header-col-someKey"
+                onClick={[Function]}
+                variant="head"
+                width={150}
+              >
+                <span
+                  className="cellBase-0-2-12 head-0-2-13 leftAlign-0-2-15 headCell-0-2-6 sortable-0-2-5 sortable-d3-0-2-11"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": 150,
+                      "flexGrow": 0,
+                      "flexShrink": 0,
+                    }
+                  }
+                >
+                  <span
+                    className="headCellText-0-2-7"
+                  >
+                    A LABEL
+                  </span>
+                  <SortIndicator
+                    activeSort={
+                      Object {
+                        "dataKey": "",
+                        "direction": "NONE",
+                        "sortFn": [Function],
+                      }
+                    }
+                    column={
+                      Object {
+                        "align": "left",
+                        "dataKey": "someKey",
+                        "filterFn": [Function],
+                        "filterTags": Array [],
+                        "filterType": "text",
+                        "filterable": false,
+                        "flexGrow": 0,
+                        "hide": false,
+                        "label": "A LABEL",
+                        "sortFn": [Function],
+                        "sortable": true,
+                        "valueGetter": [Function],
+                        "width": 150,
+                      }
+                    }
+                  />
+                </span>
+              </TableCell>
+              <TableCell
+                align="right"
+                className="headCell-0-2-6 sortable-0-2-5 sortable-d3-0-2-11"
+                grow={1}
+                key="header-col-someOtherKey"
+                onClick={[Function]}
+                variant="head"
+                width={200}
+              >
+                <span
+                  className="cellBase-0-2-12 head-0-2-13 rightAlign-0-2-16 headCell-0-2-6 sortable-0-2-5 sortable-d3-0-2-11"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": 200,
+                      "flexGrow": 1,
+                      "flexShrink": 0,
+                    }
+                  }
+                >
+                  <span
+                    className="headCellText-0-2-7"
+                  >
+                    A DIFFERENT LABEL
+                  </span>
+                  <SortIndicator
+                    activeSort={
+                      Object {
+                        "dataKey": "",
+                        "direction": "NONE",
+                        "sortFn": [Function],
+                      }
+                    }
+                    column={
+                      Object {
+                        "align": "right",
+                        "dataKey": "someOtherKey",
+                        "filterFn": [Function],
+                        "filterTags": Array [],
+                        "filterType": "text",
+                        "filterable": true,
+                        "flexGrow": 1,
+                        "hide": false,
+                        "label": "A DIFFERENT LABEL",
+                        "sortFn": [Function],
+                        "sortable": true,
+                        "valueGetter": [Function],
+                        "width": 200,
+                      }
+                    }
+                  />
+                </span>
+              </TableCell>
+            </div>
+          </TableHead>
+          <div
+            className="bodyWrapper-0-2-2"
+          >
+            <BodyRow
+              columns={
+                Array [
+                  Object {
+                    "align": "left",
+                    "dataKey": "someKey",
+                    "filterFn": [Function],
+                    "filterTags": Array [],
+                    "filterType": "text",
+                    "filterable": false,
+                    "flexGrow": 0,
+                    "hide": false,
+                    "label": "A LABEL",
+                    "sortFn": [Function],
+                    "sortable": true,
+                    "valueGetter": [Function],
+                    "width": 150,
+                  },
+                  Object {
+                    "align": "right",
+                    "dataKey": "someOtherKey",
+                    "filterFn": [Function],
+                    "filterTags": Array [],
+                    "filterType": "text",
+                    "filterable": true,
+                    "flexGrow": 1,
+                    "hide": false,
+                    "label": "A DIFFERENT LABEL",
+                    "sortFn": [Function],
+                    "sortable": true,
+                    "valueGetter": [Function],
+                    "width": 200,
+                  },
+                ]
+              }
+              key="row_undefined"
+              row={
+                Object {
+                  "someKey": "abc",
+                  "someOtherKey": "value1",
+                }
+              }
+            >
+              <div
+                className="row-0-2-21 row-d0-0-2-23"
+              >
+                <TableCell
+                  align="left"
+                  grow={0}
+                  key="cellsomeKey_undefined"
+                  width={150}
+                >
+                  <span
+                    className="cellBase-0-2-12 body-0-2-14 body-d2-0-2-24 leftAlign-0-2-15"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "flexBasis": 150,
+                        "flexGrow": 0,
+                        "flexShrink": 0,
+                      }
+                    }
+                  >
+                    abc
+                  </span>
+                </TableCell>
+                <TableCell
+                  align="right"
+                  grow={1}
+                  key="cellsomeOtherKey_undefined"
+                  width={200}
+                >
+                  <span
+                    className="cellBase-0-2-12 body-0-2-14 body-d3-0-2-25 rightAlign-0-2-16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "flexBasis": 200,
+                        "flexGrow": 1,
+                        "flexShrink": 0,
+                      }
+                    }
+                  >
+                    value1
+                  </span>
+                </TableCell>
+              </div>
+            </BodyRow>
+            <BodyRow
+              columns={
+                Array [
+                  Object {
+                    "align": "left",
+                    "dataKey": "someKey",
+                    "filterFn": [Function],
+                    "filterTags": Array [],
+                    "filterType": "text",
+                    "filterable": false,
+                    "flexGrow": 0,
+                    "hide": false,
+                    "label": "A LABEL",
+                    "sortFn": [Function],
+                    "sortable": true,
+                    "valueGetter": [Function],
+                    "width": 150,
+                  },
+                  Object {
+                    "align": "right",
+                    "dataKey": "someOtherKey",
+                    "filterFn": [Function],
+                    "filterTags": Array [],
+                    "filterType": "text",
+                    "filterable": true,
+                    "flexGrow": 1,
+                    "hide": false,
+                    "label": "A DIFFERENT LABEL",
+                    "sortFn": [Function],
+                    "sortable": true,
+                    "valueGetter": [Function],
+                    "width": 200,
+                  },
+                ]
+              }
+              key="row_undefined"
+              row={
+                Object {
+                  "someKey": "def",
+                  "someOtherKey": "value2",
+                }
+              }
+            >
+              <div
+                className="row-0-2-21 row-d1-0-2-26"
+              >
+                <TableCell
+                  align="left"
+                  grow={0}
+                  key="cellsomeKey_undefined"
+                  width={150}
+                >
+                  <span
+                    className="cellBase-0-2-12 body-0-2-14 body-d4-0-2-27 leftAlign-0-2-15"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "flexBasis": 150,
+                        "flexGrow": 0,
+                        "flexShrink": 0,
+                      }
+                    }
+                  >
+                    def
+                  </span>
+                </TableCell>
+                <TableCell
+                  align="right"
+                  grow={1}
+                  key="cellsomeOtherKey_undefined"
+                  width={200}
+                >
+                  <span
+                    className="cellBase-0-2-12 body-0-2-14 body-d5-0-2-28 rightAlign-0-2-16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "flexBasis": 200,
+                        "flexGrow": 1,
+                        "flexShrink": 0,
+                      }
+                    }
+                  >
+                    value2
+                  </span>
+                </TableCell>
+              </div>
+            </BodyRow>
+          </div>
+        </div>
+      </Table>
+    </DataGridContextProvider>
+  </DataGrid>
+</ThemeProvider>
+`;
+
+exports[`dataGrid - Component should render with settings no header but filters 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "colorBlack": "#000000",
+      "colorGrayDark": "#666666",
+      "colorGrayLight": "#f1f4f9",
+      "colorHighlight": "#fef0d8",
+      "colorPrimary": "#d51641",
+      "colorSecondary": "#a3b415",
+      "colorWhite": "#FFFFFF",
+    }
+  }
+>
+  <DataGrid
+    columns={
+      Array [
+        Object {
+          "align": "left",
+          "dataKey": "someKey",
+          "filterFn": [Function],
+          "filterTags": Array [],
+          "filterType": "text",
+          "filterable": false,
+          "flexGrow": 0,
+          "hide": false,
+          "label": "A LABEL",
+          "sortFn": [Function],
+          "sortable": true,
+          "valueGetter": [Function],
+          "width": 150,
+        },
+        Object {
+          "align": "right",
+          "dataKey": "someOtherKey",
+          "filterFn": [Function],
+          "filterTags": Array [],
+          "filterType": "text",
+          "filterable": true,
+          "flexGrow": 1,
+          "hide": false,
+          "label": "A DIFFERENT LABEL",
+          "sortFn": [Function],
+          "sortable": true,
+          "valueGetter": [Function],
+          "width": 200,
+        },
+      ]
+    }
+    gridConfig={
+      Object {
+        "hideHead": true,
+        "showFilters": true,
+      }
+    }
+    rows={
+      Array [
+        Object {
+          "someKey": "abc",
+          "someOtherKey": "value1",
+        },
+        Object {
+          "someKey": "def",
+          "someOtherKey": "value2",
+        },
+      ]
+    }
+  >
+    <DataGridContextProvider
+      columns={
+        Array [
+          Object {
+            "align": "left",
+            "dataKey": "someKey",
+            "filterFn": [Function],
+            "filterTags": Array [],
+            "filterType": "text",
+            "filterable": false,
+            "flexGrow": 0,
+            "hide": false,
+            "label": "A LABEL",
+            "sortFn": [Function],
+            "sortable": true,
+            "valueGetter": [Function],
+            "width": 150,
+          },
+          Object {
+            "align": "right",
+            "dataKey": "someOtherKey",
+            "filterFn": [Function],
+            "filterTags": Array [],
+            "filterType": "text",
+            "filterable": true,
+            "flexGrow": 1,
+            "hide": false,
+            "label": "A DIFFERENT LABEL",
+            "sortFn": [Function],
+            "sortable": true,
+            "valueGetter": [Function],
+            "width": 200,
+          },
+        ]
+      }
+      rows={
+        Array [
+          Object {
+            "someKey": "abc",
+            "someOtherKey": "value1",
+          },
+          Object {
+            "someKey": "def",
+            "someOtherKey": "value2",
+          },
+        ]
+      }
+    >
+      <Table
+        gridConfig={
+          Object {
+            "hideHead": true,
+            "showFilters": true,
+          }
+        }
+      >
+        <div
+          className="wrapper-0-2-1"
+          style={
+            Object {
+              "minWidth": 350,
+            }
+          }
+        >
+          <FilterBar
+            columns={
+              Array [
+                Object {
+                  "align": "left",
+                  "dataKey": "someKey",
+                  "filterFn": [Function],
+                  "filterTags": Array [],
+                  "filterType": "text",
+                  "filterable": false,
+                  "flexGrow": 0,
+                  "hide": false,
+                  "label": "A LABEL",
+                  "sortFn": [Function],
+                  "sortable": true,
+                  "valueGetter": [Function],
+                  "width": 150,
+                },
+                Object {
+                  "align": "right",
+                  "dataKey": "someOtherKey",
+                  "filterFn": [Function],
+                  "filterTags": Array [],
+                  "filterType": "text",
+                  "filterable": true,
+                  "flexGrow": 1,
+                  "hide": false,
+                  "label": "A DIFFERENT LABEL",
+                  "sortFn": [Function],
+                  "sortable": true,
+                  "valueGetter": [Function],
+                  "width": 200,
+                },
+              ]
+            }
+          >
+            <div
+              className="wrapper-0-2-3"
+            >
+              <div
+                key="someOtherKey-filter"
+              >
+                <FilterText
+                  column={
+                    Object {
+                      "align": "right",
+                      "dataKey": "someOtherKey",
+                      "filterFn": [Function],
+                      "filterTags": Array [],
+                      "filterType": "text",
+                      "filterable": true,
+                      "flexGrow": 1,
+                      "hide": false,
+                      "label": "A DIFFERENT LABEL",
+                      "sortFn": [Function],
+                      "sortable": true,
+                      "valueGetter": [Function],
+                      "width": 200,
+                    }
+                  }
+                >
+                  <div
+                    className="wrapper-0-2-29"
+                  >
+                    <Typography
+                      tag="h3"
+                      variant="title"
+                    >
+                      <h3
+                        className="title-0-2-33"
+                      >
+                        Filter by A DIFFERENT LABEL:
+                      </h3>
+                    </Typography>
+                    <div
+                      className="inputWrapper-0-2-30"
+                    >
+                      <TextField
+                        onChange={[Function]}
+                        placeholder="A DIFFERENT LABEL"
+                        type="text"
+                        value=""
+                      >
+                        <input
+                          className="input-0-2-37 input-d0-0-2-38"
+                          onChange={[Function]}
+                          placeholder="A DIFFERENT LABEL"
+                          type="text"
+                          value=""
+                        />
+                      </TextField>
+                      <FilterButton
+                        onClick={[Function]}
+                      >
+                        <button
+                          className="button-0-2-39"
+                          onClick={[Function]}
+                          type="submit"
+                        >
+                          <AddCircle
+                            className="filterButtonIcon-0-2-40"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="filterButtonIcon-0-2-40"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                              />
+                            </svg>
+                          </AddCircle>
+                        </button>
+                      </FilterButton>
+                    </div>
+                  </div>
+                </FilterText>
+              </div>
+            </div>
+          </FilterBar>
+          <div
+            className="bodyWrapper-0-2-2"
+          >
+            <BodyRow
+              columns={
+                Array [
+                  Object {
+                    "align": "left",
+                    "dataKey": "someKey",
+                    "filterFn": [Function],
+                    "filterTags": Array [],
+                    "filterType": "text",
+                    "filterable": false,
+                    "flexGrow": 0,
+                    "hide": false,
+                    "label": "A LABEL",
+                    "sortFn": [Function],
+                    "sortable": true,
+                    "valueGetter": [Function],
+                    "width": 150,
+                  },
+                  Object {
+                    "align": "right",
+                    "dataKey": "someOtherKey",
+                    "filterFn": [Function],
+                    "filterTags": Array [],
+                    "filterType": "text",
+                    "filterable": true,
+                    "flexGrow": 1,
+                    "hide": false,
+                    "label": "A DIFFERENT LABEL",
+                    "sortFn": [Function],
+                    "sortable": true,
+                    "valueGetter": [Function],
+                    "width": 200,
+                  },
+                ]
+              }
+              key="row_undefined"
+              row={
+                Object {
+                  "someKey": "abc",
+                  "someOtherKey": "value1",
+                }
+              }
+            >
+              <div
+                className="row-0-2-21 row-d2-0-2-41"
+              >
+                <TableCell
+                  align="left"
+                  grow={0}
+                  key="cellsomeKey_undefined"
+                  width={150}
+                >
+                  <span
+                    className="cellBase-0-2-12 body-0-2-14 body-d6-0-2-42 leftAlign-0-2-15"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "flexBasis": 150,
+                        "flexGrow": 0,
+                        "flexShrink": 0,
+                      }
+                    }
+                  >
+                    abc
+                  </span>
+                </TableCell>
+                <TableCell
+                  align="right"
+                  grow={1}
+                  key="cellsomeOtherKey_undefined"
+                  width={200}
+                >
+                  <span
+                    className="cellBase-0-2-12 body-0-2-14 body-d7-0-2-43 rightAlign-0-2-16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "flexBasis": 200,
+                        "flexGrow": 1,
+                        "flexShrink": 0,
+                      }
+                    }
+                  >
+                    value1
+                  </span>
+                </TableCell>
+              </div>
+            </BodyRow>
+            <BodyRow
+              columns={
+                Array [
+                  Object {
+                    "align": "left",
+                    "dataKey": "someKey",
+                    "filterFn": [Function],
+                    "filterTags": Array [],
+                    "filterType": "text",
+                    "filterable": false,
+                    "flexGrow": 0,
+                    "hide": false,
+                    "label": "A LABEL",
+                    "sortFn": [Function],
+                    "sortable": true,
+                    "valueGetter": [Function],
+                    "width": 150,
+                  },
+                  Object {
+                    "align": "right",
+                    "dataKey": "someOtherKey",
+                    "filterFn": [Function],
+                    "filterTags": Array [],
+                    "filterType": "text",
+                    "filterable": true,
+                    "flexGrow": 1,
+                    "hide": false,
+                    "label": "A DIFFERENT LABEL",
+                    "sortFn": [Function],
+                    "sortable": true,
+                    "valueGetter": [Function],
+                    "width": 200,
+                  },
+                ]
+              }
+              key="row_undefined"
+              row={
+                Object {
+                  "someKey": "def",
+                  "someOtherKey": "value2",
+                }
+              }
+            >
+              <div
+                className="row-0-2-21 row-d3-0-2-44"
+              >
+                <TableCell
+                  align="left"
+                  grow={0}
+                  key="cellsomeKey_undefined"
+                  width={150}
+                >
+                  <span
+                    className="cellBase-0-2-12 body-0-2-14 body-d8-0-2-45 leftAlign-0-2-15"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "flexBasis": 150,
+                        "flexGrow": 0,
+                        "flexShrink": 0,
+                      }
+                    }
+                  >
+                    def
+                  </span>
+                </TableCell>
+                <TableCell
+                  align="right"
+                  grow={1}
+                  key="cellsomeOtherKey_undefined"
+                  width={200}
+                >
+                  <span
+                    className="cellBase-0-2-12 body-0-2-14 body-d9-0-2-46 rightAlign-0-2-16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "flexBasis": 200,
+                        "flexGrow": 1,
+                        "flexShrink": 0,
+                      }
+                    }
+                  >
+                    value2
+                  </span>
+                </TableCell>
+              </div>
+            </BodyRow>
+          </div>
+        </div>
+      </Table>
+    </DataGridContextProvider>
+  </DataGrid>
+</ThemeProvider>
+`;

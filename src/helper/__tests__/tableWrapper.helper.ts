@@ -1,5 +1,5 @@
-import createColConfig from './ColConfig';
-import calculateMinWidth from './tableWrapper.helper';
+import createColConfig from '../ColConfig';
+import calculateMinWidth from '../tableWrapper.helper';
 
 describe('tableWrapper - Helper Functions', () => {
   describe('min Width calculator', () => {
